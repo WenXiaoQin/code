@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <div class="container">
+            <div class="toggle"></div>
+            <span class="hidden"><a href="#">HOME</a></span>
+            <span class="hidden"><a href="#">ABOT</a></span>
+            <span class="hidden"><a href="#">INFO</a></span>
+            <span class="hidden"><a href="#">CONTACT</a></span>
+        </div>
+    </div>
+    <style>
+        @import url(./fontText.css);
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1d90f5;
+            min-height: 100vh;
+            margin: 0;
+            font-family: roboto;
+        }
+        body::before {
+            content: "";
+            background: #E8FAFF;
+            height: 50%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        /* 设置内容的属性 */
+        .menu {
+            display: block;
+            box-sizing: border-box;/*设置这个就不需要手动计算盒子的大小了*/
+            background: white;
+            height: 87.75px;
+            width: 87.75px;
+            padding:36px;
+            border-radius: 6px;   
+            overflow: hidden;/*溢出隐藏*/
+            position: relative;
+            
+        }
+    </style>
+</body>
+</html>

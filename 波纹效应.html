@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>波纹效应</title>
+</head>
+<body>
+    <span class="ripple"></span>
+    <style>
+        .ripple {
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: 160px auto;
+            /*animation---循环 linear 动画从头到尾的速度是相同的*/
+            animation: ripple 0.6s linear infinite;
+            border-radius: 50px;
+            background-color: #FFF;
+        }
+        @keyframes ripple {
+            0% {
+                box-shadow: 
+                0 0 0 0 rgba(0, 128, 0, 0.1),
+                0 0 0 20px rgba(0, 128, 0, 0.1), 
+                0 0 0 40px rgba(0, 128, 0, 0.1), 
+                0 0 0 60px rgba(0, 128, 0, 0.1);
+            }
+            100% {
+                box-shadow: 
+                0 0 0 20px rgba(0, 128, 0, 0.0),
+                0 0 0 40px rgba(0, 128, 0, 0.1), 
+                0 0 0 60px rgba(0, 128, 0, 0.1), 
+                0 0 0 80px rgba(0, 128, 0, 0);
+            }
+        }
+    </style>
+</body>
+</html>
